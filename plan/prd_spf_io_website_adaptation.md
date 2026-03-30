@@ -5,7 +5,7 @@
 - Product: spf.io marketing and product website
 - Document type: Product Requirements Document (PRD)
 - Date: 2026-03-30
-- Status: Draft v3
+- Status: Draft v4
 - Prepared by: GitHub Copilot
 
 ## 2. References Used
@@ -150,13 +150,27 @@ Adapt spf.io into a high-clarity, high-conversion, accessibility-first website t
 5. About
 6. Request a Quote
 
+### 11.1 Header Dropdown Navigation Model
+
+1. Product, Solutions, and Resources must be top-level header items with dropdown menus on desktop.
+2. Product dropdown must include: Events, Content, Conversations, Integrations, Custom AI.
+3. Solutions dropdown must include: Church, Conferences, Corporate Events, Education, Government, Theater/Performing Arts.
+4. Resources dropdown must include: Blog, Case Studies, Training Center, Documentation, FAQ.
+5. About and Request a Quote remain persistent top-level actions and are not nested inside dropdown menus.
+
 ## 12. Functional Requirements
 
 ### 12.1 Global Navigation and Layout
 
 1. FR-001: Sticky top navigation with Product, Solutions, Resources, About, and Request a Quote CTA.
-2. FR-002: Mobile navigation must preserve the same taxonomy and CTA prominence.
-3. FR-003: Global language selector pattern for website localization readiness.
+2. FR-002: On desktop, Product, Solutions, and Resources must render as header dropdown triggers.
+3. FR-003: Product dropdown must expose Events, Content, Conversations, Integrations, and Custom AI.
+4. FR-004: Solutions dropdown must expose Church, Conferences, Corporate Events, Education, Government, and Theater/Performing Arts.
+5. FR-005: Resources dropdown must expose Blog, Case Studies, Training Center, Documentation, and FAQ.
+6. FR-006: Dropdown menus must support keyboard navigation (Tab, Arrow keys, Enter, Escape), visible focus states, and correct ARIA semantics.
+7. FR-007: Mobile navigation must preserve the same taxonomy and CTA prominence using expandable groups for Product, Solutions, and Resources.
+8. FR-008: About and Request a Quote must remain directly reachable in both desktop and mobile navigation without requiring nested navigation traversal.
+9. FR-009: Global language selector pattern for website localization readiness.
 
 ### 12.2 Homepage
 
@@ -316,6 +330,7 @@ The adaptation must follow installed skill guidance listed in skills-lock.json.
 3. Track integrations matrix interactions and doc/support exits.
 4. Track case-study assisted conversions.
 5. Track calculator_start, calculator_input_change, calculator_complete, calculator_to_quote, and calculator_abandon events.
+6. Track header_dropdown_open and header_dropdown_click events for Product, Solutions, and Resources menus.
 
 ## 17. Rollout Plan
 

@@ -1,0 +1,25 @@
+# Dependencies
+
+node_modules
+
+# Build artifacts
+
+.next
+out
+coverage
+
+# VCS and editor
+
+.git
+.gitignore
+.vscode
+
+# Local environment files
+
+.env
+.env.\*
+
+# Project docs and planning artifacts not required in runtime image
+
+plan
+.agents
